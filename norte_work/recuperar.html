@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Norte — Recuperar senha</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="auth-page page-ready">
+  <main class="auth-wrap">
+    <section class="auth-brand">
+      <a class="brand" href="index.html"><span class="brand-mark"></span><span class="brand-name">Norte</span></a>
+      <div>
+        <h1>Recupere o acesso à sua conta.</h1>
+        <p>Informe seu e-mail para receber um token e definir uma nova senha.</p>
+      </div>
+      <div class="auth-mini">© 2026 Norte Finanças</div>
+    </section>
+    <section class="auth-form">
+      <div id="step-request">
+        <h2>Recuperar senha</h2>
+        <p class="auth-subtitle">Informe o e-mail cadastrado para receber o token de redefinição.</p>
+        <form data-auth="reset-request">
+          <div class="form-group"><label for="email">E-mail</label><input class="input" id="email" name="email" type="email" placeholder="voce@email.com" required></div>
+          <button class="auth-submit" type="submit">Enviar token</button>
+        </form>
+      </div>
+      <div id="step-reset" hidden>
+        <h2>Definir nova senha</h2>
+        <p class="auth-subtitle">Digite o token recebido e escolha a nova senha.</p>
+        <form data-auth="reset-confirm">
+          <input id="reset-email" name="email" type="hidden">
+          <div class="form-group"><label for="token">Token de redefinição</label><input class="input" id="token" name="token" inputmode="numeric" placeholder="000000" required></div>
+          <div class="form-row">
+            <div class="form-group"><label for="password">Nova senha</label><input class="input" id="password" name="password" type="password" placeholder="••••••••" required></div>
+            <div class="form-group"><label for="password2">Confirmar senha</label><input class="input" id="password2" name="password2" type="password" placeholder="••••••••" required></div>
+          </div>
+          <button class="auth-submit" type="submit">Redefinir senha</button>
+        </form>
+      </div>
+      <div class="auth-footer">Lembrou a senha? <a href="login.html">Entrar</a></div>
+      <a class="back-home" href="index.html">← Voltar ao início</a>
+    </section>
+  </main>
+  <script src="script.js"></script>
+</body>
+
+</html>
